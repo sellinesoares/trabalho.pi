@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+           <title>Listagem de postagem</title>
+    </head>
+
+<body>
+    <h1>Listagem de Postagens</h1>
+    <ul>
+        #{list items:postagens, as:'postagem'}
+        <li>
+            <strong>Título:</strong> ${postagem.titulo} <br>
+            <strong>Autor:</strong> ${postagem.autor} <br>
+            <strong>Data:</strong> ${postagem.data} <br>
+            <strong>Conteúdo:</strong> ${postagem.conteudo} <br>
+           
+            <a href="@{Postagem.remover(postagem.id)}" onclick="return confirm('Tem certeza que deseja excluir esta postage?')">Excluir</a>
+       
+            <hr>
+        </li>
+        #{/list}
+    </ul>
+    <a href="@{Postagens.form()}">Criar Nova Postagem</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+</html>

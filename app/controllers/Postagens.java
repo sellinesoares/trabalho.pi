@@ -12,4 +12,21 @@ public class Postagens extends Controller{
 		   //render(Postagens);
 		}
 
+	public static void salvar(Postagem p){
+		p.save();
+		listar();
+	}
+	
+	public static void form(){
+		render();
+	}
+
+	public static void remover(Long id){
+		Postagem postagem = postagem.findByid(id);
+		if (postagem != null){
+			postagem.delete();
+		}
+		listar();
+	}
+
 }
