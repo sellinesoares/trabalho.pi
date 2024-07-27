@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulário de Postagem</title>
+    </head>
+
+<body>
+    <h1>Formulário de Postagem</h1>
+    <form action="@{Postagens.salvar()}" method="post">
+        <label for="titulo">Título</label><br>
+        <input type="text" id="titulo" name="p.titulo"><br>
+
+        <label for="autor">Autor</label><br>
+        <input type="text" id="autor" name="p.autor"><br>
+
+        <label for="data">Data</label><br>
+        <input type="text" id="data" name="p.data"><br>
+
+        <label for="conteudo">Conteúdo</label><br>
+        <textarea id="conteudo" name="p.conteudo"></textarea><br>
+
+        <input type="submit" value="salvar">
+    </form>
+    <a href="@{Postagens.listar()}">voltar para Listagem</a>
+</body>
+</html>
