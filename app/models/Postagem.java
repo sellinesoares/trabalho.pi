@@ -11,7 +11,7 @@ public class Postagem extends Model{
 	public String autor;
 	public Date data;
 
-	public Postagem (String  titulo, String conteudo, String autor, Data data ){
+	public Postagem (String  titulo, String conteudo, String autor, Date data ){
 		this.titulo = titulo;
 		this.conteudo = conteudo;
 		this.autor = autor;

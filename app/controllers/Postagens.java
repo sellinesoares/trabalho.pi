@@ -9,7 +9,7 @@ public class Postagens extends Controller{
 	
 	public static void listar() {
 		   List<Postagem> postagens = Postagem.findAll();
-		   //render(Postagens);
+		   render(postagens);
 		}
 
 	public static void salvar(Postagem p){
@@ -22,7 +22,7 @@ public class Postagens extends Controller{
 	}
 
 	public static void remover(Long id){
-		Postagem postagem = postagem.findByid(id);
+		Postagem postagem = Postagem.findById(id);
 		if (postagem != null){
 			postagem.delete();
 		}
